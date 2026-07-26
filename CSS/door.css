@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Gradient Emerald-Teal */
+  background: linear-gradient(135deg, #064e3b 0%, #115e59 50%, #022c22 100%);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.portal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.h2-content {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 6px;
+}
+
+.sub-content {
+  color: #a7f3d0;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Wrapper Logo */
+.logo-door-wrapper {
+  position: relative;
+  width: 260px;
+  height: 320px;
+  transition: transform 0.3s ease;
+}
+
+.portal-container:hover .logo-door-wrapper {
+  transform: scale(1.04);
+}
+
+/* Base Style Layer Gambar Logo */
+.logo-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 1s ease;
+}
+
+.logo-part img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+}
+
+/* --- PEMISAHAN ELEMEN DAUN DAN IKAN --- */
+
+/* Layer DAUN (Mengambil area kiri sampai atas) */
+.logo-daun {
+  clip-path: polygon(0% 0%, 100% 0%, 45% 65%, 0% 100%);
+}
+
+/* Layer IKAN (Mengambil area kanan sampai bawah) */
+.logo-ikan {
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 45% 65%);
+}
+
+/* --- ANIMASI PEMISAHAN SAAT DIKLIK --- */
+
+/* DAUN: Terbang Melayang ke Kiri-Atas */
+.logo-door-wrapper.terpisah .logo-daun {
+  transform: translate(-140px, -120px) rotate(-20deg) scale(0.9);
+  opacity: 0;
+}
+
+/* IKAN: Berenang Meluncur ke Kanan-Bawah */
+.logo-door-wrapper.terpisah .logo-ikan {
+  transform: translate(140px, 120px) rotate(15deg) scale(0.9);
+  opacity: 0;
+}
