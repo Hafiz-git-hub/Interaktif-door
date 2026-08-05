@@ -7,7 +7,6 @@
 }
 
 body {
-  /* DIUBAH: Menggunakan gradient emerald-teal persis main.html & door.html */
   background: linear-gradient(135deg, #064e3b 0%, #115e59 50%, #022c22 100%);
   display: flex;
   justify-content: center;
@@ -20,63 +19,45 @@ body {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 h1 {
   font-weight: 700;
   margin: 0;
-  font-size: 28px;
+  font-size: 26px;
+  color: #064e3b;
 }
 
-h2 {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 32px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-p {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
-}
-
-span {
+.form-desc {
   font-size: 13px;
   color: #666;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 10px 0 20px;
 }
 
-a {
-  /* DIUBAH: Aksen link disesuaikan ke hijau emerald */
+a.forgot-link {
   color: #059669;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
-  margin: 15px 0;
+  margin: 10px 0 15px;
   transition: color 0.3s ease;
 }
 
-a:hover {
+a.forgot-link:hover {
   color: #047857;
 }
 
 button {
   border-radius: 25px;
   border: none;
-  /* DIUBAH: Gradient tombol dikombinasikan dengan warna emerald */
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
   color: #ffffff;
   font-size: 13px;
   font-weight: 600;
-  padding: 14px 50px;
+  padding: 14px 40px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -93,18 +74,40 @@ button:active {
   transform: translateY(0);
 }
 
-button:focus {
-  outline: none;
-}
-
 button.transparent-btn {
   background: transparent;
   border: 2px solid #ffffff;
-  transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 button.transparent-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Custom styling untuk tombol kunjungi */
+.btn-visitor {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #047857 0%, #064e3b 100%);
+}
+
+.visitor-badge {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 15px 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border: 1px border #a7f3d0;
+}
+
+.visitor-badge i {
+  font-size: 20px;
 }
 
 form {
@@ -113,9 +116,13 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 40px;
   height: 100%;
   text-align: center;
+}
+
+.input-group {
+  width: 100%;
 }
 
 input {
@@ -123,7 +130,7 @@ input {
   border: 2px solid transparent;
   border-radius: 12px;
   padding: 14px 18px;
-  margin: 8px 0;
+  margin: 6px 0;
   width: 100%;
   font-size: 14px;
   transition: all 0.3s ease;
@@ -179,14 +186,11 @@ input:focus {
 }
 
 @keyframes show {
-  0%,
-  49.99% {
+  0%, 49.99% {
     opacity: 0;
     z-index: 1;
   }
-
-  50%,
-  100% {
+  50%, 100% {
     opacity: 1;
     z-index: 5;
   }
@@ -208,12 +212,8 @@ input:focus {
 }
 
 .slide-panel {
-  /* DIUBAH: Background slide-panel disamakan dengan gradient utama */
   background: linear-gradient(135deg, #064e3b 0%, #115e59 50%, #022c22 100%);
-  background-size: cover;
-  background-position: center;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   left: -100%;
   height: 100%;
@@ -241,6 +241,19 @@ input:focus {
   transition: transform 0.6s ease-in-out;
 }
 
+.panel-content h1 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.panel-content p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0 25px;
+  color: #e2e8f0;
+}
+
 .panel-content-left {
   transform: translateX(-20%);
 }
@@ -258,31 +271,6 @@ input:focus {
   transform: translateX(20%);
 }
 
-.social-links {
-  margin: 25px 0;
-}
-
-.social-links a {
-  border: 2px solid #e0e0e0;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 8px;
-  height: 45px;
-  width: 45px;
-  transition: all 0.3s ease;
-  color: #059669;
-}
-
-.social-links a:hover {
-  border-color: #059669;
-  background: #059669;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(5, 150, 105, 0.4);
-}
-
 .mobile-switch {
   display: none;
 }
@@ -290,21 +278,18 @@ input:focus {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 15px;
   }
 
   .auth-wrapper {
     min-height: auto;
     width: 100%;
-    max-width: 100%;
     border-radius: 15px;
   }
 
   .auth-form-box {
     position: static !important;
     width: 100% !important;
-    transform: none !important;
-    opacity: 1 !important;
   }
 
   .login-form-box,
@@ -314,7 +299,6 @@ input:focus {
     left: 0 !important;
     transform: none !important;
     opacity: 1 !important;
-    z-index: 1 !important;
   }
 
   .register-form-box {
@@ -334,68 +318,39 @@ input:focus {
   }
 
   form {
-    padding: 30px 25px;
-    position: static;
-    height: auto;
-  }
-
-  h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  input {
-    padding: 12px 15px;
-    font-size: 14px;
-  }
-
-  button {
-    padding: 12px 40px;
-    font-size: 12px;
-  }
-
-  .social-links a {
-    height: 40px;
-    width: 40px;
-    margin: 0 5px;
+    padding: 35px 20px;
   }
 
   .mobile-switch {
     display: block;
-    margin-top: 20px;
-    color: #059669;
-    font-size: 14px;
+    margin-top: 25px;
   }
 
   .mobile-switch p {
-    margin: 10px 0;
-    font-size: 14px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
   }
 
   .mobile-switch button {
     background: transparent;
     color: #059669;
     border: 2px solid #059669;
-    padding: 10px 30px;
-    margin-top: 10px;
+    padding: 8px 25px;
     box-shadow: none;
-  }
-
-  .mobile-switch button:hover {
-    background: #059669;
-    color: #fff;
   }
 }
 
 #button-final {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #f7f7f7;
   padding: 10px 30px;
-  margin-top: 10px;
+  margin-top: 20px;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+#button-final:hover {
+  background: rgba(255, 255, 255, 0.3);
 }

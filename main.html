@@ -1,224 +1,476 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentra Mina & Tani Mekarmukti - Potensi Daerah</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAVICON (Ikon Tab Browser) -->
+    <link rel="icon" type="image/png" href="Assets/Logo.png" />
+    <title>Sentra Mina Argo Mekarmukti</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
     <!-- NAVBAR -->
-    <!-- NAV: Dikunci tingginya (h-16), padding atas-bawah dibikin 0 (py-0) -->
-<nav class="bg-emerald-900 text-white h-16 py-0 px-6 md:px-12 sticky top-0 z-50 shadow-md flex justify-between items-center">
-    
-    <!-- CONTAINER LOGO: Ikut terkunci tinggi h-full -->
-    <div class="flex items-center gap-3 h-full overflow-hidden">
-        <!-- LOGO: Bikin h-full (mengisi penuh dari paling atas sampai bawah navbar) -->
-        <img src="Assets/Logo.png" alt="Logo" class="h-full py-1 w-auto object-contain">
-        <span class="text-xl font-bold">Sentra Mina Argo Mekarmukti</span>
-    </div>
+    <nav
+      class="bg-emerald-900/95 backdrop-blur-sm text-white h-16 py-0 px-6 md:px-12 sticky top-0 z-50 shadow-lg flex justify-between items-center border-b border-emerald-700/50 transition-all duration-300"
+    >
+      <!-- CONTAINER LOGO -->
+      <div class="flex items-center gap-3 h-full overflow-hidden group">
+        <img
+          src="Assets/Logo.png"
+          alt="Logo Sentra Mina Argo"
+          class="h-full py-1 w-auto object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+        />
+        <span
+          class="text-xl font-bold tracking-wide transition-colors duration-300 group-hover:text-emerald-200"
+        >
+          Sentra Mina Argo Mekarmukti
+        </span>
+      </div>
 
-    <!-- Menu Navigasi Desktop -->
-    <div class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#profil" class="hover:text-emerald-300 transition">Profil</a>
-        <a href="#sektor" class="hover:text-emerald-300 transition">Sektor Unggulan</a>
-        <a href="#kegiatan" class="hover:text-emerald-300 transition">Kegiatan Tani</a>
-        <a href="#lokasi" class="hover:text-emerald-300 transition">Lokasi</a>
-    </div>
+      <!-- MENU NAVIGASI DESKTOP -->
+      <div class="hidden md:flex gap-1 text-sm font-semibold items-center">
+        <a
+          href="#profil"
+          class="relative px-3.5 py-2 rounded-lg text-emerald-100 hover:text-white transition-all duration-300 group overflow-hidden"
+        >
+          <span class="relative z-10">Profil</span>
+          <span
+            class="absolute inset-0 bg-emerald-700/60 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-lg"
+          ></span>
+          <span
+            class="absolute left-3.5 right-3.5 bottom-1 h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></span>
+        </a>
 
-    <!-- Tombol Logout -->
-    <a href="door.html" class="bg-red-600 hover:bg-red-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1">
-        <i class="fa-solid fa-right-from-bracket"></i> Keluar
-    </a>
-</nav>
+        <a
+          href="#sektor"
+          class="relative px-3.5 py-2 rounded-lg text-emerald-100 hover:text-white transition-all duration-300 group overflow-hidden"
+        >
+          <span class="relative z-10">Sektor Unggulan</span>
+          <span
+            class="absolute inset-0 bg-emerald-700/60 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-lg"
+          ></span>
+          <span
+            class="absolute left-3.5 right-3.5 bottom-1 h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></span>
+        </a>
+
+        <a
+          href="#kegiatan"
+          class="relative px-3.5 py-2 rounded-lg text-emerald-100 hover:text-white transition-all duration-300 group overflow-hidden"
+        >
+          <span class="relative z-10">Kegiatan Tani</span>
+          <span
+            class="absolute inset-0 bg-emerald-700/60 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-lg"
+          ></span>
+          <span
+            class="absolute left-3.5 right-3.5 bottom-1 h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></span>
+        </a>
+
+        <a
+          href="#lokasi"
+          class="relative px-3.5 py-2 rounded-lg text-emerald-100 hover:text-white transition-all duration-300 group overflow-hidden"
+        >
+          <span class="relative z-10">Lokasi</span>
+          <span
+            class="absolute inset-0 bg-emerald-700/60 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-lg"
+          ></span>
+          <span
+            class="absolute left-3.5 right-3.5 bottom-1 h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></span>
+        </a>
+      </div>
+
+      <!-- TOMBOL LOGOUT -->
+      <a
+        href="door.html"
+        class="bg-red-600 hover:bg-red-500 text-xs px-3.5 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center gap-1.5 shadow-md hover:shadow-red-500/50 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+      >
+        <i
+          class="fa-solid fa-right-from-bracket transition-transform duration-300 group-hover:translate-x-0.5"
+        ></i>
+        Keluar
+      </a>
+    </nav>
     <!-- HERO SECTION -->
-    <section class="bg-gradient-to-r from-emerald-900 via-teal-800 to-emerald-950 text-white py-20 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <span class="bg-emerald-700/60 text-emerald-200 text-xs px-3 py-1 rounded-full uppercase tracking-widest font-semibold border border-emerald-500">Pemberdayaan Wilayah</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold mt-4 leading-tight">Menanamkan Harapan Membesarkan Kehidupan dan Mewujudkan Kemandirian</h1>
+    <section
+      class="bg-gradient-to-r from-emerald-900 via-teal-800 to-emerald-950 text-white py-20 px-6 text-center"
+    >
+      <div class="max-w-4xl mx-auto">
+        <span
+          class="bg-emerald-700/60 text-emerald-200 text-xs px-3 py-1 rounded-full uppercase tracking-widest font-semibold border border-emerald-500"
+          >Lahan & Budidaya</span
+        >
+        <h1 class="text-3xl md:text-5xl font-extrabold mt-4 leading-tight">
+          Menanamkan Harapan Membesarkan Kehidupan dan Mewujudkan Kemandirian
+        </h1>
 
-            <div class="mt-8 flex justify-center gap-4">
-                <a href="#sektor" class="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-bold px-5 py-2.5 rounded-lg text-sm shadow-md transition">Jelajahi Sektor</a>
-                <a href="#profil" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 rounded-lg text-sm border border-white/20 transition">Pelajari Lebih Lanjut</a>
-            </div>
+        <div class="mt-8 flex justify-center gap-4">
+          <a
+            href="#sektor"
+            class="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-bold px-5 py-2.5 rounded-lg text-sm shadow-md transition"
+            >Jelajahi Sektor</a
+          >
+          <a
+            href="#profil"
+            class="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 rounded-lg text-sm border border-white/20 transition"
+            >Pelajari Lebih Lanjut</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- PROFIL & FOKUS -->
     <section id="profil" class="py-16 px-6 max-w-6xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-emerald-950">Mengenal Sentra Mekarmukti</h2>
-            <p class="mt-3 text-slate-600">
-                Sentra ini dibentuk sebagai wadah edukasi, integrasi teknologi budidaya, dan kolaborasi antar pembudidaya ikan serta petani di wilayah Mekarmukti untuk meningkatkan produktivitas lahan secara berkelanjutan.
-            </p>
-        </div>
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-emerald-950">
+          Mengenal Sentra Mekarmukti
+        </h2>
+        <p class="mt-3 text-slate-600">
+          Sentra Mina Argo Mekarmukti adalah kawasan pengembangan perikanan,
+          pertanian, edukasi, dan wisata alam yang dibangun untuk mendukung
+          ketahanan pangan serta pemberdayaan masyarakat. Lebih dari sekadar
+          tempat budidaya, kawasan ini menjadi ruang belajar, berkolaborasi, dan
+          bertumbuh bersama menuju desa yang mandiri dan berkelanjutan. Tumbuh
+          Bersama Alam, Sejahtera Bersama Hasil.
+        </p>
+      </div>
 
-        <div class="grid md:grid-cols-3 gap-8 mt-12">
-            <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-water"></i>
-                </div>
-                <h3 class="font-bold text-lg text-slate-800">Budidaya Ramah Lingkungan</h3>
-                <p class="text-slate-500 text-sm mt-2">Penerapan sistem pengelolaan air dan pakan efisien yang menjaga keberlanjutan ekosistem lokal.</p>
-            </div>
-            <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-seedling"></i>
-                </div>
-                <h3 class="font-bold text-lg text-slate-800">Inovasi Pertanian</h3>
-                <p class="text-slate-500 text-sm mt-2">Integrasi tanaman pangan dengan sistem budidaya air terpadu untuk hasil yang optimal.</p>
-            </div>
-            <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-users"></i>
-                </div>
-                <h3 class="font-bold text-lg text-slate-800">Edukasi Pelajar dan Mahasiswa</h3>
-                <p class="text-slate-500 text-sm mt-2">Dokumentasi kegiatan siswa dan mahasiswa dalam mempelajari budidaya ikan air tawar serta pertanian terpadu di Sentra Mina & Tani.
-        </p></p>
-            </div>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div
+          class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition"
+        >
+          <div
+            class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 text-xl"
+          >
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-800">
+            Budidaya Ramah Lingkungan
+          </h3>
+          <p class="text-slate-500 text-sm mt-2">
+            Penerapan sistem pengelolaan air dan pakan efisien yang menjaga
+            keberlanjutan ekosistem lokal.
+          </p>
         </div>
+        <div
+          class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition"
+        >
+          <div
+            class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 text-xl"
+          >
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-800">Inovasi Pertanian</h3>
+          <p class="text-slate-500 text-sm mt-2">
+            Integrasi tanaman pangan dengan sistem budidaya air terpadu untuk
+            hasil yang optimal.
+          </p>
+        </div>
+        <div
+          class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition"
+        >
+          <div
+            class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 text-xl"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-800">
+            Edukasi Pelajar dan Mahasiswa
+          </h3>
+          <p class="text-slate-500 text-sm mt-2">
+            Dokumentasi kegiatan siswa dan mahasiswa dalam mempelajari budidaya
+            ikan air tawar serta pertanian terpadu di Sentra Mina & Tani.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- SEKTOR UNGGULAN -->
     <section id="sektor" class="py-16 bg-slate-100 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Fokus Sektor Utama</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Sektor Perikanan -->
-                <!-- Sektor Perikanan (Updated Copywriting & Image) -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-                <!-- Gambar Kolam / Empang Air Tawar -->
-                <img src="Assets/areaIkan.jpeg" class="h-56 w-full object-cover">
-                <div class="p-6">
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Budidaya Air Tawar</span>
-                    <h3 class="text-xl font-bold mt-2 text-slate-800">Komoditas Lele, Bawal & Patin</h3>
-                    <p class="text-slate-600 text-sm mt-2">
-                        Optimalisasi ekosistem kolam empang lokal untuk budidaya Ikan Lele, Bawal, dan Patin secara produktif, berfokus pada ketahanan pakan alami serta daya tahan ikan yang unggul.
-                    </p>
-                </div>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">
+          Fokus Sektor Utama
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Sektor Perikanan -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="Assets/areaIkan.jpeg"
+              alt="Area Ikan"
+              class="h-56 w-full object-cover"
+            />
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md"
+                >Budidaya Air Tawar</span
+              >
+              <h3 class="text-xl font-bold mt-2 text-slate-800">
+                Komoditas Lele, Bawal & Patin
+              </h3>
+              <p class="text-slate-600 text-sm mt-2">
+                Optimalisasi ekosistem kolam empang lokal untuk budidaya Ikan
+                Lele, Bawal, dan Patin secara produktif, berfokus pada ketahanan
+                pakan alami serta daya tahan ikan yang unggul.
+              </p>
             </div>
+          </div>
 
-                <!-- Sektor Pertanian -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-                    <img src="Assets/Tanaman.jpg">
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Pertanian Terpadu</span>
-                        <h3 class="text-xl font-bold mt-2 text-slate-800">Lahan Hijau & Pangan Lokal</h3>
-                        <p class="text-slate-600 text-sm mt-2">
-                            Pemanfaatan lahan sekitar kolam untuk tanaman holtikultura, sayuran organik, dan pakan alami yang menunjang ketahanan pangan lokal.
-                        </p>
-                    </div>
-                </div>
+          <!-- Sektor Pertanian -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="Assets/Tanaman.jpg"
+              alt="Tanaman"
+              class="h-56 w-full object-cover"
+            />
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md"
+                >Pertanian Terpadu</span
+              >
+              <h3 class="text-xl font-bold mt-2 text-slate-800">
+                Lahan Hijau & Pangan Lokal
+              </h3>
+              <p class="text-slate-600 text-sm mt-2">
+                Pemanfaatan lahan sekitar kolam untuk tanaman holtikultura,
+                sayuran organik, dan pakan alami yang menunjang ketahanan pangan
+                lokal.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- GALERI KEGIATAN -->
+    <!-- GALERI KEGIATAN -->
     <section id="kegiatan" class="py-16 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-slate-900 text-center mb-8">Kegiatan & Edukasi Lapangan</h2>
-        
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="overflow-hidden rounded-xl shadow-sm">
-                <img src="Assets/kegiatan.png" alt="Kegiatan 1" class="class="w-full h-48 object-cover object-bottom hover:scale-105 transition duration-300">
-            </div>
-            <div class="overflow-hidden rounded-xl shadow-sm">
-                <img src="Assets/kegiatan2.jpg" alt="Kegiatan 2" class="class="w-full h-48 object-cover object-bottom hover:scale-105 transition duration-300">
-            </div>
-            <div class="overflow-hidden rounded-xl shadow-sm sm:col-span-2 md:col-span-1">
-                <img src="Assets/kegiatan1.png" alt="Kegiatan 3" class="class="w-full h-48 object-cover object-bottom hover:scale-105 transition duration-300">
-            </div>
+      <h2 class="text-3xl font-bold text-slate-900 text-center mb-8">
+        Kegiatan & Edukasi Lapangan
+      </h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          class="overflow-hidden rounded-2xl shadow-md border border-slate-200"
+        >
+          <img
+            src="Assets/IMG_20260730_135710.jpg"
+            alt="Kegiatan 1"
+            class="w-full h-64 object-cover block hover:scale-105 transition duration-300"
+          />
         </div>
+
+        <div
+          class="overflow-hidden rounded-2xl shadow-md border border-slate-200"
+        >
+          <img
+            src="Assets/IMG_20260730_135724.jpg"
+            alt="Kegiatan 2"
+            class="w-full h-64 object-cover block hover:scale-105 transition duration-300"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl shadow-md border border-slate-200"
+        >
+          <img
+            src="Assets/kegiatan.png"
+            alt="Kegiatan 2"
+            class="w-full h-64 object-cover block hover:scale-105 transition duration-300"
+          />
+        </div>
+
+        <div
+          class="overflow-hidden rounded-2xl shadow-md border border-slate-200 sm:col-span-2 md:col-span-1"
+        >
+          <img
+            src="Assets/IMG_20260730_135734.jpg"
+            alt="Kegiatan 3"
+            class="w-full h-64 object-cover block hover:scale-105 transition duration-300"
+          />
+        </div>
+      </div>
     </section>
 
-    <!-- SECTION LOKASI -->
-     <!-- SECTION LOKASI -->
+    <!-- SECTION LOKASI & KONTAK -->
     <section id="lokasi" class="py-16 px-6 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <!-- Judul Section -->
-            <div class="text-center mb-12">
-                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">Kunjungi Kami</span>
-                <h2 class="text-3xl font-bold text-slate-900 mt-2">Lokasi & Operasional Empang</h2>
-                <p class="text-slate-600 text-sm mt-2 max-w-xl mx-auto">
-                    Silakan datang langsung ke lokasi budidaya kami untuk melihat proses pengelolaan empang ikan air tawar dan lahan pertanian terpadu.
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
-                <!-- Peta Google Maps Embed (7 kolom) -->
-                <div class="lg:col-span-7 bg-slate-100 rounded-2xl overflow-hidden shadow-sm h-[380px] lg:h-auto border border-slate-200">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d377.60608674379324!2d107.1632978253323!3d-6.285784827339967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1785053785623!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="strict-origin-when-cross-origin">
-                    </iframe>
-                </div>
-                </div>
-
-                <!-- Kartu Detail Alamat & Kontak (5 kolom) -->
-                <div class="lg:col-span-5 bg-gradient-to-br from-emerald-900 to-teal-900 text-white rounded-2xl p-8 flex flex-col justify-between shadow-md">
-                    <div>
-                        <h3 class="text-xl font-bold mb-6 text-emerald-400 border-b border-emerald-800 pb-3">Informasi Kontak</h3>
-                        
-                        <!-- Detail Alamat -->
-                        <div class="space-y-5">
-                            <div class="flex items-start gap-4">
-                                <div class="p-2.5 bg-emerald-800/50 rounded-lg text-emerald-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-semibold text-slate-200">Alamat Utama</h4>
-                                    <p class="text-sm text-emerald-100/80 mt-1 leading-relaxed">
-                                        Jl. Raya Mekarmukti No. 45, Desa Mekarmukti, Cikarang Utara, Kabupaten Bekasi, Jawa Barat 17530
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Jam Operasional -->
-                            <div class="flex items-start gap-4">
-                                <div class="p-2.5 bg-emerald-800/50 rounded-lg text-emerald-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-semibold text-slate-200">Jam Operasional / Panen</h4>
-                                    <p class="text-sm text-emerald-100/80 mt-1">
-                                        Senin - Minggu: 07.00 - 17.00 WIB<br>
-                                        <span class="text-xs text-emerald-300/70">*Konfirmasi sebelum kunjungan partai besar</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tombol Action Navigasi -->
-                    <div class="mt-8 pt-6 border-t border-emerald-800/60">
-                        <a href="https://maps.google.com" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                            Buka Petunjuk Arah (Google Maps)
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-6xl mx-auto">
+        <!-- Judul Section -->
+        <div class="text-center mb-12">
+          <span
+            class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider"
+            >Kunjungi Kami</span
+          >
+          <h2 class="text-3xl font-bold text-slate-900 mt-2">
+            Lokasi & Informasi Kontak
+          </h2>
+          <p class="text-slate-600 text-sm mt-2 max-w-xl mx-auto">
+            Silakan datang langsung atau hubungi kami untuk informasi pemesanan
+            hasil panen, konsultasi, dan kunjungan edukasi.
+          </p>
         </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Peta Google Maps Embed (7 kolom) -->
+          <div
+            class="lg:col-span-7 bg-slate-100 rounded-2xl overflow-hidden shadow-sm h-[400px] lg:h-auto border border-slate-200 min-h-[380px]"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d686.7913708945017!2d107.16292639518196!3d-6.285686848961626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698500284e87bb%3A0x2b3f4a3702bd790!2sSentra%20Mina%20Argo%20Mekarmukti!5e1!3m2!1sid!2sid!4v1785394348468!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            >
+            </iframe>
+          </div>
+
+          <!-- Kartu Detail Alamat & Kontak (5 kolom) -->
+          <div
+            class="lg:col-span-5 bg-gradient-to-br from-emerald-900 to-teal-900 text-white rounded-2xl p-8 flex flex-col justify-between shadow-md"
+          >
+            <div>
+              <h3
+                class="text-xl font-bold mb-6 text-emerald-400 border-b border-emerald-800 pb-3"
+              >
+                Hubungi Kami
+              </h3>
+
+              <div class="space-y-4">
+                <!-- Detail Alamat -->
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="p-2 bg-emerald-800/50 rounded-lg text-emerald-300 shrink-0 mt-0.5"
+                  >
+                    <i class="fa-solid fa-location-dot w-4 h-4 text-center"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-xs font-semibold uppercase tracking-wider text-emerald-300"
+                    >
+                      Alamat Utama
+                    </h4>
+                    <p
+                      class="text-sm text-emerald-100/90 mt-0.5 leading-relaxed"
+                    >
+                      P577+P9H, Mekarmukti, Kec. Cikarang Utara, Kabupaten
+                      Bekasi, Jawa Barat 17530
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Telepon / WhatsApp -->
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="p-2 bg-emerald-800/50 rounded-lg text-emerald-300 shrink-0 mt-0.5"
+                  >
+                    <i class="fa-brands fa-whatsapp w-4 h-4 text-center"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-xs font-semibold uppercase tracking-wider text-emerald-300"
+                    >
+                      Telepon / WhatsApp
+                    </h4>
+                    <a
+                      href="https://wa.me/6281234567890"
+                      target="_blank"
+                      class="text-sm text-emerald-100/90 hover:text-white hover:underline mt-0.5 block"
+                    >
+                      +62 812-3456-7890
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Email Kontak -->
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="p-2 bg-emerald-800/50 rounded-lg text-emerald-300 shrink-0 mt-0.5"
+                  >
+                    <i class="fa-regular fa-envelope w-4 h-4 text-center"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-xs font-semibold uppercase tracking-wider text-emerald-300"
+                    >
+                      Email
+                    </h4>
+                    <a
+                      href="mailto:info@mekarmukti.id"
+                      class="text-sm text-emerald-100/90 hover:text-white hover:underline mt-0.5 block"
+                    >
+                      info@mekarmukti.id
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Jam Operasional -->
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="p-2 bg-emerald-800/50 rounded-lg text-emerald-300 shrink-0 mt-0.5"
+                  >
+                    <i class="fa-regular fa-clock w-4 h-4 text-center"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-xs font-semibold uppercase tracking-wider text-emerald-300"
+                    >
+                      Jam Operasional / Panen
+                    </h4>
+                    <p class="text-sm text-emerald-100/90 mt-0.5">
+                      Senin - Minggu: 07.00 - 17.00 WIB
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tombol Action Navigasi & Chat -->
+            <div class="mt-8 pt-6 border-t border-emerald-800/60 space-y-3">
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm"
+              >
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                Chat via WhatsApp
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=-6.2856868,107.1629263"
+                target="_blank"
+                class="w-full bg-emerald-800/60 hover:bg-emerald-800 text-white font-semibold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm border border-emerald-700"
+              >
+                <i class="fa-solid fa-diamond-turn-right text-sm"></i>
+                Petunjuk Arah (Google Maps)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-emerald-950 text-slate-400 py-8 text-center text-xs border-t border-emerald-900">
-        <p>&copy; 2026 Sentra Mina & Tani Mekarmukti. Portal Edukasi & Showcase Potensi Daerah.</p>
+    <footer
+      class="bg-emerald-950 text-slate-400 py-8 text-center text-xs border-t border-emerald-900"
+    >
+      <p>
+        &copy; 2026 Sentra Mina & Tani Mekarmukti. Portal Informasi & Showcase
+        Budidaya.
+      </p>
     </footer>
-
-</body>
+  </body>
 </html>

@@ -1,73 +1,84 @@
 // Element Selection
-const registerBtn = document.getElementById('registerBtn');
-const loginBtn = document.getElementById('loginBtn');
-const mobileRegisterBtn = document.getElementById('mobileRegisterBtn');
-const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+const adminBtn = document.getElementById('adminBtn');
+const visitorBtn = document.getElementById('visitorBtn');
+const mobileAdminBtn = document.getElementById('mobileAdminBtn');
+const mobileVisitorBtn = document.getElementById('mobileVisitorBtn');
 const authWrapper = document.getElementById('authWrapper');
 const buttonFinal = document.getElementById('button-final');
 
-const loginForm = document.querySelector('.login-form-box form');
-const registerForm = document.querySelector('.register-form-box form');
+const visitorForm = document.getElementById('visitorForm');
+const adminForm = document.getElementById('adminForm');
 
-// Toggle Panel Active / Inactive
-if (registerBtn) {
-    registerBtn.addEventListener('click', () => {
+// Toggle Slide Panel (Desktop & Mobile)
+if (adminBtn) {
+    adminBtn.addEventListener('click', () => {
         authWrapper?.classList.add("panel-active");
     });
 }
 
-if (loginBtn) {
-    loginBtn.addEventListener('click', () => {
+if (visitorBtn) {
+    visitorBtn.addEventListener('click', () => {
         authWrapper?.classList.remove("panel-active");
     });
 }
 
-if (mobileRegisterBtn) {
-    mobileRegisterBtn.addEventListener('click', () => {
+if (mobileAdminBtn) {
+    mobileAdminBtn.addEventListener('click', () => {
         authWrapper?.classList.add("panel-active");
     });
 }
 
-if (mobileLoginBtn) {
-    mobileLoginBtn.addEventListener('click', () => {
+if (mobileVisitorBtn) {
+    mobileVisitorBtn.addEventListener('click', () => {
         authWrapper?.classList.remove("panel-active");
     });
 }
 
-// Button Final Action (Transisi Ke door.html)
-if (buttonFinal) {
-    buttonFinal.addEventListener('click', () => {
-        setTimeout(() => {
-            document.body.style.transition = "opacity 0.5s ease";
-            document.body.style.opacity = "0";
-            setTimeout(() => {
-                window.location.href = 'door.html';
-            }, 500);
-        }, 1200);
-    });
-}
-
-// Handling Submit Form Login (Sign In -> main.html)
-if (loginForm) {
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Mencegah reload halaman bawaan form
+// Handler Form Kunjungi / Tamu (Langsung Klik Tanpa Email & Password -> main.html)
+if (visitorForm) {
+    visitorForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Mencegah form reload bawaan
         
-        // Animasi transisi fade out
+        // Transisi Smooth Fade Out
         document.body.style.transition = "opacity 0.5s ease";
         document.body.style.opacity = "0";
 
-        // Pindah ke halaman main.html
+        // Redirect langsung ke Halaman Utama (main.html)
         setTimeout(() => {
             window.location.href = "main.html"; 
         }, 500);
     });
 }
 
-// Handling Submit Form Register (Sign Up -> Pindah ke Login)
-if (registerForm) {
-    registerForm.addEventListener('submit', (e) => {
+// Handler Form Admin (Perlu Email & Password -> Dashboard Admin atau main.html)
+if (adminForm) {
+    adminForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert("Pendaftaran anggota/pengunjung berhasil! Silakan Sign In untuk masuk.");
-        authWrapper?.classList.remove("panel-active"); // Kembalikan ke panel Login
+        
+        const email = document.getElementById('adminEmail').value;
+        const password = document.getElementById('adminPassword').value;
+
+        // Contoh validasi sederhana
+        if(email && password) {
+            alert(`Login Admin Berhasil!\nSelamat datang, ${email}`);
+            
+            document.body.style.transition = "opacity 0.5s ease";
+            document.body.style.opacity = "0";
+
+            setTimeout(() => {
+                window.location.href = "main.html"; // Atau ganti ke admin-dashboard.html jika ada
+            }, 500);
+        }
+    });
+}
+
+// Button Final Action (Transisi Kembali Ke door.html)
+if (buttonFinal) {
+    buttonFinal.addEventListener('click', () => {
+        document.body.style.transition = "opacity 0.5s ease";
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+            window.location.href = 'door.html';
+        }, 500);
     });
 }
